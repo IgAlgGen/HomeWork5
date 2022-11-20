@@ -81,17 +81,8 @@ public class Main {
         int deliveryDistance = 150, deliveryDays = 1, daysDelivery = 1 + (deliveryDistance + 19) / 40; // решение (daysDelivery = 1 + (deliveryDistance + 19) / 40) слизано, но работает более корректно
         System.out.println("Потребуется дней " + daysDelivery);
 
-        if (deliveryDistance > 20) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 60) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 100) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 140) {
-            deliveryDays++;
+        if (deliveryDistance > 0) {
+            deliveryDays+= (deliveryDistance + 20) / 40;
         }
         System.out.println("Потребуется дней " + deliveryDays);
 
